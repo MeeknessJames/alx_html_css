@@ -1,0 +1,28 @@
+/* Make the body a flex container with vertical direction */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;   /* Full viewport height */
+  margin: 0;       /* Remove default margin */
+}
+
+/* Make main a flex container with horizontal direction */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;      /* Automatic height and width */
+}
+
+/* Article takes 2 parts (2/3 width) and scrolls vertically if needed */
+article {
+  flex: 2;
+  overflow-y: auto;
+  padding: 1rem;   /* Optional: add some padding */
+}
+
+/* Aside takes 1 part (1/3 width) and scrolls vertically if needed */
+aside {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;   /* Optional: add some padding */
+}
