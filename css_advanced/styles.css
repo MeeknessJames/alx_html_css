@@ -1,0 +1,409 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HERO SECTION: background shared by header and section */
+.hero {
+  background-image: url('./images/Object.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+/* NAV inside hero header */
+.hero header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  /*background-color: rgba(0, 0, 0, 0.6);  optional overlay */
+}
+
+/* Logo image */
+.hero header img {
+  height: 60px;
+}
+
+/* Nav links */
+.hero nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.hero nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* HERO SECTION MAIN CONTENT */
+.hero section {
+  padding: 80px 60px;
+}
+
+/* Text like “Get schooled” + tags + button */
+.hero section > div:first-child {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h1 {
+  font-size: 5rem; /* Increase the size */
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Button */
+.hero button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #d387c9;
+  color: white;
+  border: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #e24c4c;
+}
+
+
+/* "Learn from the pros" section */
+/* Add spacing between button and h2 */
+.hero h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 60px; /* Space from the button */
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Horizontal layout for the 4 pro cards */
+.hero .pro-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  padding: 0 40px;
+}
+
+/* Style individual card */
+.hero .pro-cards div {
+  text-align: center;
+  width: 180px;
+  color: white;
+}
+
+.hero .pro-cards img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.hero .pro-cards h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+
+.hero .pro-cards p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .hero .pro-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6ccff; /* lilac purple */
+  padding: 60px 40px;
+  gap: 40px; /* space between image and quote */
+  color: #333;
+}
+
+/* Image styling */
+.testimonial img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 20px; /* space from edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text content */
+.testimonial blockquote {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+  max-width: 500px;
+}
+
+.testimonial h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+}
+/* TUTORIALS SECTION */
+.tutorials {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.tutorials h2 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+
+/* Flex layout for the 4 tutorial cards */
+.tutorials > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin: 1%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Main tutorial image */
+.tutorials > div > img:first-of-type {
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Overlay play icon */
+.tutorials > div > div:first-of-type img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Heading inside each card */
+.tutorials > div h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+/* Description paragraph */
+.tutorials > div p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0.3rem 0;
+}
+
+/* Author section (play icon + name) */
+.tutorials > div > div:first-of-type h4 {
+  font-size: 0.9rem;
+  margin-left: 45px;
+  margin-top: -25px;
+  text-align: left;
+  color: #555;
+}
+
+/* Star rating layout */
+.tutorials > div > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.tutorials > div > div:nth-of-type(2) div {
+  margin: 0 2px;
+  color: gold;
+}
+
+/* Duration text */
+.tutorials > div > p:last-of-type {
+  font-weight: bold;
+  color: #444;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tutorials > div {
+    width: 45%;
+    margin: 2.5%;
+  }
+}
+/* MEMBERSHIP SECTION */
+
+.membership {
+  background-color: navy;
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Style only the 'Free' text */
+.membership h2 span {
+  color: purple;
+}
+
+/* Select only the 4 divs inside .membership and make them horizontal */
+.membership > div {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%; /* 4 items ~ 100% width total with spacing */
+  margin: 10px 1%;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Image styling */
+.membership img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Heading inside each div */
+.membership h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+}
+
+/* Paragraph inside each div */
+.membership p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Button styling */
+.membership button {
+  margin-top: 30px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.membership button:hover {
+  background-color: #5e1d91;
+}
+.faq {
+  background-color: rgb(224, 224, 231);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.faq > div {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.faq > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.faq > div > div > div {
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .faq > div > div {
+    width: 100%;
+  }
+}
+.footer {
+  background-color: #0f1b2a; /* Dark navy */
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer img {
+  width: 150px;
+}
+
+.footer div i {
+  font-size: 20px;
+  margin-left: 15px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer div i:hover {
+  color: #6c757d; /* light gray on hover */
+}
+
+.footer p {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+}
